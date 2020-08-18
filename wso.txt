@@ -1,4 +1,4 @@
-?><?php
+<?php
 
 
 $default_action = 'SecInfo';
